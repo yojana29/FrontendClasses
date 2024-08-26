@@ -1,0 +1,59 @@
+.container{
+    border:2px solid black;
+    padding:20px;
+    width:400px;
+    height:500px;
+    margin:0 auto;
+}
+.head{
+    display:flex;
+    justify-content:space-between;
+}
+.add{
+    border:1px solid black;
+    display:flex;
+    gap:10px;
+    width:max-content;
+    background-color:skyblue;
+    color:blue;
+    border-radius:10px;
+    padding:5px;
+    font-weight: bold;
+    height:35px;
+}
+.search{
+    border:1px solid black;
+    display:flex;
+    gap:10px;
+    padding:10px;
+}
+input[type="text"]{
+    border:none;
+}
+.box{
+    border:1px solid black;
+    padding:10px;
+}
+.box1{
+    border:1px solid black;
+    padding:10px;
+}
+.person{
+    display:flex;
+    gap:5px;
+    position:relative;
+}
+.icon{
+   position:absolute;
+   right:5px;
+   gap:50px;
+}
+
+img{
+    height:20px;
+    width:20px;
+    border-radius:100%;
+}
+
+
+

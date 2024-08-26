@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style>
+        .calculator{
+            border:2px solid black;
+            margin:0 auto;
+            padding:15px;
+            width:300px;
+            height:600px;
+            background-color: black;
+            color:skyblue;
+            border-radius: 10px;
+            display:flex;
+            flex-direction:column;
+            gap:20px;
+            
+
+
+        }
+        
+        
+        .container{
+          
+            display:grid;
+            grid-template-rows:repeat(7,50px);
+            grid-template-columns: repeat(4,50px);
+            grid-gap:10px;
+            align-content:flex-end;
+            justify-content:center;  
+
+        }
+        div{
+            border:1px solid skyblue;
+            padding:10px;
+            border-radius: 10px;
+            border:none;
+
+        }  
+        .item0{
+            align-self:flex-end;
+            font-size:20px;
+            height:150px;
+            padding:20px;
+            width:50%;
+            margin:20px 20px;
+        }
+        .item16{
+            grid-row:span 2;  
+        }
+        .item22{
+            grid-row:span 1.5;
+        }
+        .item20{
+           grid-column:span 2; 
+        }
+
+
+     </style>
+</head>
+<body> 
+    <div class="calculator">
+
+        <div class="item0">
+            6000/2+3227*2
+            <br>
+            =12,454
+        </div>
+        <div class="container"> 
+        <div class="item1">e</div>
+        <div class="item2">cos</div>
+        <div class="item3">sin</div>
+        <div class="item4">deg</div>
+        <div class="item5">Ac</div>
+        <div class="item6"><i class="fa-regular fa-circle-xmark"></i></div>
+        <div class="item7">/</div>
+        <div class="item8">*</div>
+        <div class="item9">7</div>
+        <div class="item10">8</div>
+        <div class="item11">9</div>
+        <div class="item12">-</div>
+        <div class="item13">4</div>
+        <div class="item14">5</div>
+        <div class="item15">6</div>
+        <div class="item16">+</div>
+        <div class="item17">1</div>
+        <div class="item18">2</div>
+        <div class="item19">3</div>
+        <div class="item20">0</div>
+        <div class="item21">.</div>
+        <div class="item22">=</div>
+        </div>
+    
+    </div>
+</body>
+</html>

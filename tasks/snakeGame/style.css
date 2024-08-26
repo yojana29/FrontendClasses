@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+.container{
+    border:1px solid black;
+    background-color:antiquewhite;
+    height:500px;
+    width:500px;
+    position:relative;
+    top:150px;
+    left:450px;
+
+}
+.details{
+    border:1px solid black;
+    background-color: azure;
+    padding:10px;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    font-size:1.4rem;
+    font-weight:500;
+}
+.container .board{
+    height:100vh;
+    display:grid;
+    grid-template:repeat(30,1fr)/repeat(30,1fr);
+    overflow:hidden;
+}

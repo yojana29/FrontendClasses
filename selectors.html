@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors</title>
+
+    <style>
+        /*universal selectors*/
+        *{
+            padding:10px;
+            margin:10px;
+            box-sizing: border-box;
+        }
+        /*attribute  value selector*/
+        input[type="email"]{
+            color:red;
+            background-color: yellow;
+        }
+        input[placeholder]{
+            color:blue;
+            background-color: palegreen;
+        }
+        input[type="password"]{
+            background-color:aqua;
+        }
+       /* a[target="_blank"]{
+            color:pink;
+            text-decoration: none;
+        }
+        a[target="_top"]{
+            text-decoration: none;
+        }*/
+        p,h1{
+            color:purple;
+        }
+        .one, .two, .three{
+            color:blue;
+
+        }
+        div .one{
+            color:purple;
+
+        }
+        div .one span{
+            color:brown;
+        }
+        .btn{
+            padding:10px;
+            border:1px solid black;
+            border-radius:10px;
+            cursor:pointer;
+        }
+        .btn:hover{
+            background-color: black;
+            color:white;
+        }
+        #textIn:focus{
+            outline:none;
+            background-color:orange;
+        }
+        a{
+            font-size:60px;
+            color:black;
+            text-decoration:none;
+        }
+        /*unvisited link*/
+        a:link{
+            color:#ff0000;
+        }
+        /*visited link*/
+        a:visited{
+            color:#00ff00;
+        }
+        /*mouse over link*/
+        a:hover{
+            color:#ff00ff;
+        }
+        /*selected link*/
+        a:active{
+            color:#0000ff;
+        }
+        p:first-child{
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+   <!---- <div>Hello Everyone</div>
+
+    <input type="email" placeholder="email">
+    <input type="password" placeholder="password">
+    <a href="#" target="_blank">Blank</a>
+    <a href="#" target="_top">Top</a>
+    <p class="one"> HELLO</p>
+    <div>
+        <p class="one">This is paragraph one <span>Nice</span></p>
+        <h1 class="two">This is paragraph two</h1>
+        <p class="three">This is paragraph three</p>
+    </div>
+          <a href="https://www.google.com" target="_blank">Google</a>
+          <br>
+          <br>
+         <button class="btn">Click Me</button>
+         <input id ="textIn" type="text">-->
+         <div>
+             <p>this is para 1</p>
+             <p>this is para 2</p>
+         </div>
+         <div>
+            <p>this is para 1</p>
+            <p>this is para 2</p>
+        </div>
+        <div>
+            <p>this is para 1</p>
+            <p>this is para 2</p>
+        </div>
+        <div>
+            <p>this is para 1</p>
+            <p>this is para 2</p>
+        </div>
+
+
+
+</body>
+</html>

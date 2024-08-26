@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background:url("image2.png");
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:center;
+    }
+    .box{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        margin:300px auto;
+        color:white;
+
+    }
+    .box1{
+        display: flex;
+        flex-direction:row;
+        justify-content:right;
+        gap:30px;
+        color:white;
+        margin-right:100px;
+
+    }
+    span{
+        color:orange;
+        font-size: 30px;
+
+    }
+    .tinker{
+        font-size:25px;
+        color:white;
+        margin-left: 100px;
+    }
+    #btn{
+        border-radius:20px;
+        background:white;
+        color:black;
+        border:1px solid black;
+        width: 100px;
+        height:50px;
+    }
+    .a{
+        color:orangered;
+    }
+    .b{
+        color:rgb(34, 151, 190);
+    }
+    .c{
+        font-size: 20px;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="box1">
+            <div class="icon">HOME</div>
+            <div class="icon">ABOUT US</div>
+            <div class="icon">PORTFOLIO</div>
+            <div class="icon">BLOG</div>
+            <div class="icon">CONTACT US</div>
+        </div>
+            <div class="tinker"><span>T</span>INKER</div>
+
+
+        <div class="box">
+            <h1> <a class="a">TINKER</a><a class="b">HTML5</a>TEMPLATE</h1>
+            <pre class="c">
+                Tinker is free HTML CSS from templatemo.com that can be used for any kind of
+                                 website.Please tell your friend about us.Thank you.
+            </pre>
+            <input type="button"  id="btn" value="LET'S START">
+        </div>
+    </div>
+</body>
+</html>

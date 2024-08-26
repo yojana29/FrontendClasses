@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <style>
+        .container{
+            border:1px solid black;
+            width:400px;
+            padding:10px;
+            background-color:rgb(240,242,245);
+            border-radius:10px;
+            margin-left:45%;
+            
+        }
+        .box{
+            display:flex;
+            background-color:white;
+            padding:5px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            
+        }
+        .box1{
+            display:flex;
+            justify-content:space-evenly;
+            background-color:white;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .name{
+            border-radius: 20px;
+            background-color:rgb(240,242,245);
+            width:100%;
+            outline:none;
+        }
+        .fa-solid{
+            color:red;
+        }
+        .fa-regular{
+            color:green;
+        }
+        .image{
+            width:30px;
+            height:30px;
+            border-radius:100%;
+        }
+
+     </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="flower.jpg" class="image" alt="its me">&nbsp;
+            <input type="text" class="name" placeholder="What's on your mind?">
+        </div>
+        <hr>
+        <div class="box1">
+            <p class="icon">
+                <i class="fa-solid fa-video"></i>&nbsp;Live video
+            </p>
+            <p class="icon">
+                <i class="fa-regular fa-images"></i>&nbsp;Photos/videos
+            </p>
+            <p class="icon">
+                <i class="fa-solid fa-film"></i>&nbsp;Reels
+            </p>
+            
+        </div>
+    </div>
+</body>
+</html>

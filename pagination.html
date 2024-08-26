@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagination</title>
+    <style>
+        :root{
+            --primary:#024202;
+            --secondary:#fff;
+        }
+        h2{
+            text-align:center;
+        }
+        pagination{
+            display:flex;
+            flex-direction:row;
+            justify-content: center;
+            align-items: center;
+            gap:15px;
+        }
+        .pagination a{
+            color:black;
+            font-size: 20px;
+            text-decoration:none;
+            border:none;
+            border-radius: 8px;
+            background-color:#ccc ;
+            padding:10px 15px;
+            transition:all 0.5s ease-in-out;
+        }
+        .pagination .active{
+            background-color:var(--primary);
+            color:var(--secondary);
+
+        }
+        .pagination a:hover{
+            background-color:var(--primary) ;
+            color:var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <h2>This is example of pagination.</h2>
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#" class="active">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>
+        <a href="#">&raquo;</a>
+    </div>
+</body>
+</html>
