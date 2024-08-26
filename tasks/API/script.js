@@ -21,10 +21,11 @@ function displayCountries(data){
 
         countryDiv.innerHTML=`
         <div>
-        <p>${data[i].name.common}</p>
-        <p>${data[i].flag}</p>
-        <p>${data[i].capital}</p>
-        <p>${data[i].continents}</p>
+        <p>SN:${i}</p>
+        <img src=${data[i].flags.png} alt="${data[i].flags.alt}">
+        <p>Name:${data[i].name.common}</p>
+        <p>Capital:${data[i].capital}</p>
+        <p>Continent:${data[i].continents}</p>
         </div>
         `
 
