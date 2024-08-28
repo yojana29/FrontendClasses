@@ -45,3 +45,8 @@ img{
     width:50px;
     height:50px;
 }
+select{
+    position:relative;
+    left:1000px;
+    padding:10px;
+}

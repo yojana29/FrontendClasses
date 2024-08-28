@@ -1,6 +1,9 @@
 
 const container = document.querySelector(".container");
 const search = document.querySelector("#enter");
+const filter = document.querySelector("#filter");
+
+
 //fetch url
 const BaseUrl = "https://restcountries.com/v3.1/all";
 
@@ -13,6 +16,8 @@ fetch(BaseUrl).then((res)=>{
 }).catch((err)=>{
     console.log("error occured",err);
 });
+
+//display data
 function displayCountries(data){
     
     container.innerHTML = '';
@@ -36,6 +41,7 @@ function displayCountries(data){
     }
 }
 
+//search data
 
 search.addEventListener("input",function(){
     const value = this.value;
@@ -52,5 +58,29 @@ catch(error=>{
     console.log("error occurred",error.message);
 });
    
+});
+
+
+//filtering
+filter.addEventListener("change",()=>{
+    region = filter.value;
+    filterUrl = `https://restcountries.com/v3.1/region/${region}`;
+
+    if (region === "All") {
+        // If "Filter by Region" is selected or if you want to show all countries
+        filterUrl = "https://restcountries.com/v3.1/all";
+    } else {
+        // If a specific region is selected
+        filterUrl = `https://restcountries.com/v3.1/region/${region}`;
+    }
+
+    fetch(filterUrl).then(res=>{
+       return res.json();
+    }).then(area=>{
+        console.log(area);
+        displayCountries(area);
+    }).catch(error=>{
+        console.log(error.message);
+    });
 });
 
