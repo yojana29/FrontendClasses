@@ -57,6 +57,9 @@ search.addEventListener("input",function(){
 catch(error=>{
     console.log("error occurred",error.message);
 });
+
+
+
    
 });
 
@@ -67,7 +70,7 @@ filter.addEventListener("change",()=>{
     filterUrl = `https://restcountries.com/v3.1/region/${region}`;
 
     if (region === "All") {
-        // If "Filter by Region" is selected or if you want to show all countries
+        // If select by Region is selected or if you want to show all countries
         filterUrl = "https://restcountries.com/v3.1/all";
     } else {
         // If a specific region is selected
