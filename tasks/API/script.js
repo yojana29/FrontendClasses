@@ -1,7 +1,8 @@
 
 const container = document.querySelector(".container");
-const search = document.querySelector("#enter");
+let search = document.querySelector("#enter");
 const filter = document.querySelector("#filter");
+cross = document.querySelector("#cross");
 
 
 //fetch url
@@ -46,7 +47,14 @@ function displayCountries(data){
 search.addEventListener("input",function(){
     const value = this.value;
     // console.log(value);
-    const searchUrl = `https://restcountries.com/v3.1/name/${value}`;
+    let searchUrl;
+
+    if(value == ""){
+        searchUrl =  "https://restcountries.com/v3.1/all";
+    }
+    else{
+        searchUrl = `https://restcountries.com/v3.1/name/${value}`;
+    }
 
     fetch(searchUrl).then((res)=>{
        return res.json();
@@ -63,11 +71,29 @@ catch(error=>{
    
 });
 
+//clear search
+
+cross.addEventListener("click",()=>{
+
+    search.value = "";
+    const BaseUrl = "https://restcountries.com/v3.1/all";
+
+fetch(BaseUrl).then((res)=>{
+    return res.json();
+}).then((data)=>{
+    console.log(data);
+    displayCountries(data);
+    
+}).catch((err)=>{
+    console.log("error occured",err);
+});
+})
+
 
 //filtering
 filter.addEventListener("change",()=>{
     region = filter.value;
-    filterUrl = `https://restcountries.com/v3.1/region/${region}`;
+     let filterUrl = `https://restcountries.com/v3.1/region/${region}`;
 
     if (region === "All") {
         // If select by Region is selected or if you want to show all countries
