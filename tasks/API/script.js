@@ -47,14 +47,9 @@ function displayCountries(data){
 search.addEventListener("input",function(){
     const value = this.value;
     // console.log(value);
-    let searchUrl;
+    let searchUrl=`https://restcountries.com/v3.1/name/${value}`;
 
-    if(value == ""){
-        searchUrl =  "https://restcountries.com/v3.1/all";
-    }
-    else{
-        searchUrl = `https://restcountries.com/v3.1/name/${value}`;
-    }
+  
 
     fetch(searchUrl).then((res)=>{
        return res.json();
