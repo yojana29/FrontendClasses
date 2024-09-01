@@ -2,28 +2,95 @@
 const container = document.querySelector(".container");
 let search = document.querySelector("#enter");
 const filter = document.querySelector("#filter");
-cross = document.querySelector("#cross");
+let cross = document.querySelector("#cross");
+let leftbtn = document.querySelector("#leftbtn");
+let rightbtn = document.querySelector("#rightbtn");
 
 
+let dataOne = 0;
+let dataTwo = 52;
+let fetchedData;
 //fetch url
 const BaseUrl = "https://restcountries.com/v3.1/all";
 
 fetch(BaseUrl).then((res) => {
     return res.json();
 }).then((data) => {
-    console.log(data);
-    displayCountries(data);
+    // console.log(data);
+    fetchedData = data;
+    filterCountry(dataOne,dataTwo);
+    // console.log(fetchedData);
+
+    // displayCountries(data);
+    
 
 }).catch((err) => {
     console.log("error occured", err);
 });
 
+
+
+// pagination
+
+function filterCountry(dataOne,dataTwo){
+    // console.log(fetchedData);
+
+    let filterCountries = fetchedData.slice(dataOne,dataTwo);
+    // console.log(filterCountries);
+
+    displayCountries(filterCountries);
+}
+
+leftbtn.addEventListener("click",function(){
+
+    dataOne-= 52;
+    dataTwo-= 52;
+
+    if(dataOne < 0 ){
+        console.log("disabled");
+        // leftbtn.disabled = true;
+        dataOne = 0;
+        dataTwo = 52;
+        
+    }
+    else{
+        console.log("clicked");
+        console.log(fetchedData);
+       filterCountry(dataOne,dataTwo);
+        
+    }
+
+});
+
+rightbtn.addEventListener("click",function(){
+    dataOne+= 52;
+    dataTwo+= 52;
+
+    if(dataTwo > fetchedData.length){
+        console.log("disabled");
+        // rightbtn.disabled = true;
+        dataOne = fetchedData.length-52;
+        dataTwo = fetchedData.length;
+    }
+    else{
+        
+        console.log("clicked");
+        filterCountry(dataOne,dataTwo);
+    }
+})
+
+
+
+
+
 //display data
 function displayCountries(data) {
+    
 
     container.innerHTML = '';
 
     for (let i = 0; i < data.length; i++) {
+    
         // console.log(data);
         let countryDiv = document.createElement("div");
         countryDiv.classList.add("country");
@@ -42,6 +109,8 @@ function displayCountries(data) {
     }
 }
 
+
+
 //search data
 
 search.addEventListener("input", function () {
@@ -56,6 +125,7 @@ search.addEventListener("input", function () {
     }).then(country => {
         console.log(country);
         displayCountries(country);
+    
     }).
         catch(error => {
             console.log("error occurred", error.message);
@@ -107,4 +177,8 @@ filter.addEventListener("change", () => {
         console.log(error.message);
     });
 });
+
+
+
+
 
