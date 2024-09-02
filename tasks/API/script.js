@@ -5,6 +5,8 @@ const filter = document.querySelector("#filter");
 let cross = document.querySelector("#cross");
 let leftbtn = document.querySelector("#leftbtn");
 let rightbtn = document.querySelector("#rightbtn");
+let leftbutton = document.querySelector(".leftbutton");
+let rightbutton = document.querySelector(".rightbutton");
 
 
 let dataOne = 0;
@@ -43,6 +45,8 @@ function filterCountry(dataOne,dataTwo){
 
 leftbtn.addEventListener("click",function(){
 
+     rightbutton.style.backgroundColor = "brown";
+
     dataOne-= 52;
     dataTwo-= 52;
 
@@ -51,11 +55,14 @@ leftbtn.addEventListener("click",function(){
         // leftbtn.disabled = true;
         dataOne = 0;
         dataTwo = 52;
+        filterCountry(dataOne,dataTwo);
+        leftbutton.style.backgroundColor = "burlywood";
         
     }
     else{
         console.log("clicked");
-        console.log(fetchedData);
+        // console.log(fetchedData);
+        console.log(dataOne,dataTwo);
        filterCountry(dataOne,dataTwo);
         
     }
@@ -63,17 +70,23 @@ leftbtn.addEventListener("click",function(){
 });
 
 rightbtn.addEventListener("click",function(){
+    leftbutton.style.backgroundColor = "brown";
     dataOne+= 52;
     dataTwo+= 52;
 
     if(dataTwo > fetchedData.length){
+        // console.log(fetchedData.length);
         console.log("disabled");
         // rightbtn.disabled = true;
         dataOne = fetchedData.length-52;
         dataTwo = fetchedData.length;
+        filterCountry(dataOne,dataTwo);
+        rightbutton.style.backgroundColor = "burlywood";
+
+
     }
     else{
-        
+        console.log(dataOne,dataTwo);
         console.log("clicked");
         filterCountry(dataOne,dataTwo);
     }

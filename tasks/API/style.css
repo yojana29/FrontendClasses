@@ -61,4 +61,11 @@ select{
 }
 .btn button{
     padding:10px;
+    background-color: brown;
+    border-radius: 2px;
+}
+
+.change{
+
+    background-color: burlywood;
 }
