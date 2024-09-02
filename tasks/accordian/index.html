@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordian</title>
+    <style>
+        body{
+            height:100vh;
+            display:grid;
+            place-items: center;
+        }
+        .container{
+            width:600px;
+            display:flex;
+            flex-direction:column;
+            gap:20px;
+        }
+        .box{
+            background-color:#eee;
+        }
+        .question{
+            background-color:#dad8d8;
+            padding:20px;
+            position:relative;
+        }
+        .question::after{
+            content:"+";
+            position:absolute;
+            right:30px;
+            font-size:22px;
+        }
+        .active::after{
+            content:"-";
+            top:25%;
+        }
+        .answer{
+            padding:10px;
+            display:none;
+        }
+        .active + .answer{
+            display:block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="question">What is the purpose of the"let" keyword in JS?</div>
+            <div class="answer">The let keyword is used to declare block scoped variables,allowing the 
+                variable to be limited in the scope to the block,statement,or expression in which it is used.
+            </div>
+        </div>
+        <div class="box">
+            <div class="question">How do you create a function in JS?</div>
+            <div class="answer">A function in Js an be created using the function keyword followed by a name,
+                parenthesis() for parameters,and curly braces{}for the function call.
+            </div>
+        </div>
+        <div class="box">
+            <div class="question">What is arrow function and how is it different from regular function?</div>
+            <div class="answer">An arrow function is a shorter syntax for writing functions using the =>syntax.It doesn't have its own context.</div>
+        </div>
+        <div class="box">
+            <div class="question">How do you handle asynchronous operations in JS?</div>
+            <div class="answer">Asynchronous operation in JS can be handled using callbacks,promises.(.then() and .catch() methods).or asunc/await syntax for cleaner and more readable code. 
+                Example:usinf async/await.
+            </div>
+        </div>
+        <div class="box">
+            <div class="question">What is difference between == and === in JS?</div>
+            <div class="answer">The == operator performs loose equality comparison,allowing type conversion,while the === operator performs strict equality comparison without type conversion.</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

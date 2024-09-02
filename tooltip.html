@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tooltip</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+        }
+        :root{
+            --primary:#00ffee;
+            --secondary:#ccc;
+        }
+        .socialLinks{
+            border:2px solid var(--primary);
+            margin:0 auto;
+            width:max-content;
+            padding: 100px;
+
+        }
+        .facebook{
+            position:relative;
+        }
+        .facebook i{
+            font-size:30px;
+            cursor:pointer;
+        }
+        .tooltip{
+            /* display:none; */
+            opacity:0;
+            font-size:22px;
+            border:none;
+            padding:10px;
+            background-color: var(--secondary);
+            border-radius: 20px;
+            position:absolute;
+            bottom:35px;
+            left:50%;
+            transform:translate(-50%);
+            transition:all 3s;
+
+            
+        }
+        .facebook:hover .tooltip{
+            /* display:block; */
+            opacity:1;
+        }
+    </style>
+</head>
+<body>
+    <div class="socialLinks">
+        <div class="facebook">
+            <span>
+                <i class="fa-brands fa-facebook"></i>
+            </span>
+            <div class="tooltip">Facebook</div>
+        </div>
+    </div>
+</body>
+</html>

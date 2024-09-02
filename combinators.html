@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /* .example{
+            color:red;
+           & a{
+                color:orange;
+            }
+        }*/
+       /* .container{
+            font-size:40px;
+        }
+        .container>p{
+            font-size:40px;
+        }
+        .container{
+            background-color:red;
+            height:40px;
+            width:300px;
+        }*/
+        /*descendent selector
+        .container .profile{
+          color:green;
+        }
+        h1.one{
+            color:blue;
+        }
+        h1[class="one"]{
+            color:red;
+        }
+        h1:first-of-type{
+            color:yellow;
+        }*/
+        p+h1{
+            background-color:blue;  /*next sibling selector*/
+        }
+        /*p~h1{
+            background-color: yellow;
+        }*/
+       /* div h1{
+            color:red;
+        }
+        .container>h1{
+            color:purple;
+        }*/
+        h1+h1{
+            color:blue;
+
+        }
+        .firsth1~h1{
+            color:hotpink;
+        }
+
+    </style>
+</head>
+<body>
+   <!---  <p class="example">
+        this is paragraph
+        <a href="#"> contains a link</a>,try hovering or focusing it.
+    </p>
+    <div class="container">
+        <p>This is paragraph 1</p>
+        <p>This is paragraph 2</p>
+        <div>
+            <p>This is paragraph 3</p>
+        </div>
+    </div>
+    <p>This is  outer paragraph</p>
+    <div class="container">
+        <div class="profile">My Profile</div>
+    </div>
+    <div class="profile">Hello everyone</div>
+    <div class="one">Hello everyone</div>
+    <h1 class="one">Hello</h1>
+    <h1 class="one">Yojana</h1>
+    <div class="parent">
+        <p>This is sample para</p>
+        <p>This is sample para 2</p>
+        <h1>Heading 1</h1>
+        <h1>Heading 2</h1>
+
+    </div>
+    <h1>This is heading 3</h1>-->
+    <div class="container">
+        <h1 class="firsth1">Hello I am h1</h1>
+        <h1>This is 2nd child h1</h1>
+        <div class="inside">
+            <h1>Hello I am inside h1</h1>
+        </div>
+        <h1>Hello</h1>
+    </div>
+
+</body>
+</html>
