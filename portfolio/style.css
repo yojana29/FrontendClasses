@@ -11,7 +11,7 @@
 }
 body{
     background-color:var(--secondary-color);
-    padding:30px;
+    padding-left:20px;
 }
 .container{
     max-width:1180px;
@@ -23,7 +23,8 @@ body{
 }
 .heading{
     text-align: center;
-    padding:50px;
+    padding:100px;
+
 }
 /*header*/
 
@@ -33,7 +34,7 @@ header{
     /* position:sticky; */
     position:fixed;
     top:0;
-    /* z-index: 1; */
+    z-index: 1;
     background-color:var(--secondary-color);
 
     /* media only screen and (max-width : 990px){
@@ -100,7 +101,7 @@ a{
 }
 .Aboutme{
     gap:100px;
-    padding:110px 100px;
+    padding:100px 100px;
 }
 .detail{
     margin-top:50px;
@@ -278,6 +279,13 @@ textarea{
 .footer ul a{
     color:var(--secondary-color);
 }
+
+/* darkmode */
+.dark{
+    background-color:black;
+    color:white;
+}
+
 
 
 
