@@ -39,3 +39,18 @@ function moveSnake(){
         snakeBody[i] = snakeBody[i-1];
     }
 }
+
+function updateBoard(){
+    let html = `<div class="food" style="grid-area: ${food.x}/${food.y}"></div>`
+        html += `<div class="head" style="grid-area: ${snakeHead.x}/${snakeHead.y}"></div>`
+
+        isFoodEaten();
+        isGameOver();
+
+        snakeBody.forEach((part)=>{
+            html += `<div class="head" style="grid-area: ${part.y}/${part.x}"></div>`
+
+        });
+        
+
+}
