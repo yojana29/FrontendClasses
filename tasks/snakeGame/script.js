@@ -1,4 +1,7 @@
-
+const boardElement = document.querySelector(".board");
+const scoreElement = document.querySelector(".score");
+const highScore = document.querySelector(".high-score");
+const playPauseBtn = document.querySelector(".play-pause");
 
 
 
@@ -44,13 +47,14 @@ function updateBoard(){
     let html = `<div class="food" style="grid-area: ${food.x}/${food.y}"></div>`
         html += `<div class="head" style="grid-area: ${snakeHead.x}/${snakeHead.y}"></div>`
 
-        isFoodEaten();
-        isGameOver();
+        // isFoodEaten();
+        // isGameOver();
 
         snakeBody.forEach((part)=>{
             html += `<div class="head" style="grid-area: ${part.y}/${part.x}"></div>`
 
         });
+        boardElement.innerHTML = html;
         
 
 }
