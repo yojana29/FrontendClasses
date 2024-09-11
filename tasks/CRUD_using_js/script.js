@@ -17,6 +17,13 @@ document.body.addEventListener("click",function(e){
 
 });
 
+userDiv.addEventListener("click",function(e){
+    if(e.target.id == "delete"){
+        let userDiv = e.target.closest(".user");
+        userDiv.removeChild(userDiv);
+    }
+})
+
 
 
 
