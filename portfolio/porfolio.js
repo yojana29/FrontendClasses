@@ -1,5 +1,5 @@
 let darkMode = document.querySelector(".darkmode");
 
-darkMode.addEventLListener("click",function(){
+darkMode.addEventListener("click",function(){
     body.classList.toggle("dark");
 })
