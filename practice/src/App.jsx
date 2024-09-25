@@ -1,6 +1,8 @@
 import React  from 'react';
 
-import './App.css';
+
+// import AboutUS from "./components/about-us.jsx";
+import {Link} from "react-router-dom";
 
 
 function App() {
@@ -10,7 +12,9 @@ function App() {
 
    <>
    <div>This is a homepage.</div>
-   <a href = "/about-us">About Us</a>
+   {/* <a href = "/about-us">About Us</a> */}
+   {/* <Link to={"/about-us"}>About Us</Link> */}
+   {/* <AboutUS /> */}
 
    </> 
   
