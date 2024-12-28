@@ -21,9 +21,20 @@ function App() {
             <input type="text" placeholder='describe your task' />
           </div>
           <div className="button">
-            <button className="add">Add</button>
-          </div>
-          
+            <button type = "button" className="add">Add</button>
+          </div> 
+        </div>
+
+        <div className = "btn-area">
+          <button>ToDo</button>
+          <button>Completed</button>
+        </div>
+
+        <div className = "todo-list">
+          <div className="todo-lists-items">
+            <h3>Task 1</h3>
+            <p>Description</p>
+            </div> 
         </div>
 
       </div>
