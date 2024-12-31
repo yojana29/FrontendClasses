@@ -12,15 +12,15 @@ function App() {
       <h1>To Do List</h1>
       <div className = "todo-wrapper">
         <div className="todo-input">
-          <div className="title">
+          <div className="todo-input-item">
           <label> Title</label>
           <input type="text" placeholder="what's the title" />
           </div>
-          <div className="description">
+          <div className="todo-input-item">
             <label>Description</label>
             <input type="text" placeholder='describe your task' />
           </div>
-          <div className="button">
+          <div className="todo-input-item">
             <button type = "button" className="add">Add</button>
           </div> 
         </div>

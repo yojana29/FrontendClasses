@@ -19,3 +19,20 @@ h1{
 
 }
 
+.todo-input{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-bottom:1px solid gray;
+    padding-bottom:25px;
+    margin-bottom:25px;
+
+}
+
+.todo-input-items{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    margin-right:25px;
+}
+
