@@ -1,6 +1,4 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+import React from 'react'
 import './App.css'
 
 function App() {
@@ -13,12 +11,12 @@ function App() {
       <div className = "todo-wrapper">
         <div className="todo-input">
           <div className="todo-input-item">
-          <label> Title</label>
-          <input type="text" placeholder="what's the title" />
+          <label> Title:</label>
+          <input type="text" placeholder="What's the title" />
           </div>
           <div className="todo-input-item">
-            <label>Description</label>
-            <input type="text" placeholder='describe your task' />
+            <label>Description:</label>
+            <input type="text" placeholder='Describe your task' />
           </div>
           <div className="todo-input-item">
             <button type = "button" className="add">Add</button>
@@ -30,12 +28,12 @@ function App() {
           <button>Completed</button>
         </div>
 
-        <div className = "todo-list">
+        {/* <div className = "todo-list">
           <div className="todo-lists-items">
             <h3>Task 1</h3>
             <p>Description</p>
             </div> 
-        </div>
+        </div> */}
 
       </div>
 

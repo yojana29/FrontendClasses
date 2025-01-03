@@ -1,21 +1,19 @@
-/* body{
-    background-color:rgb(51, 43, 43);
+body{
+    background-color:rgb(238, 226, 226);
     color:white;
     overflow:hidden; 
 
-} */
-
-
+}
 h1{
     text-align:center;
+    color:black;
 }
 
 .todo-wrapper{
-    background-color:rgb(51, 43, 43);
+    background-color:rgb(45, 42, 37);
     padding:2%;
-    /* width:fit-content; */
-    margin-left:auto;
-    margin-right:auto;
+    width:fit-content;
+    margin:0 auto;
 
 }
 
@@ -34,5 +32,20 @@ h1{
     flex-direction:column;
     align-items:flex-start;
     margin-right:25px;
+}
+input{
+    background-color:rgb(219, 246, 237);
+    color:black;
+    padding:15px;
+    border-radius:4px;
+}
+label{
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+button{
+    background-color:rgb(36, 140, 36);
+    margin-right:10px;
 }
 
