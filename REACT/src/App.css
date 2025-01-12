@@ -53,11 +53,11 @@ input{
     border-radius:4px;
 }
 
-.todo-input-item:focus{
+/* .todo-input-item:focus{
     outline:2px solid black;
     outline:none;
     
-}
+} */
 label{
     font-weight:800;
     margin-bottom:20px;

@@ -29,12 +29,12 @@ function App() {
           <button  className={`isCompleteScreen ${isCompleteScreen=== true  && 'active'}`} onClick = {() => setCompleteScreen(false)}>Completed</button>
         </div>
 
-        <div className = "todo-list">
+        {/* <div className = "todo-list">
           <div className="todo-lists-items">
             <h3>Task 1</h3>
             <p>Description</p>
             </div> 
-        </div>
+        </div> */}
 
       </div>
 
