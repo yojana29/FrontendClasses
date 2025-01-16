@@ -1,8 +1,26 @@
 import React,{useState} from 'react'
 import './App.css'
+import { MdDelete } from "react-icons/md";
+import { FaCheck } from "react-icons/fa";
 
 function App() {
   const [isCompleteScreen,setCompleteScreen] = useState(false);
+  const [allTodos,setTodos] = useState([]);
+  const [newTitle,setNewTitle] = useState("");
+  const [newDescription,setNewDescription] = useState("");
+
+
+  const handleAddTodo = () => {
+    let newTodoItem = {
+      title:newTitle,
+      description:newDescription
+    }
+
+    let updatedTodoArr = [...allTodos];
+    updatedTodoArr.push(newTodoItem);
+    setTodos(updatedTodoArr);
+
+  }
   
 
   return (
@@ -13,14 +31,14 @@ function App() {
         <div className="todo-input">
           <div className="todo-input-item">
           <label> Title:</label>
-          <input type="text" placeholder="What's the title" />
+          <input type="text" value = {newTitle} onChange={(e) =>setNewTitle(e.target.value)} placeholder="What's the title" />
           </div>
           <div className="todo-input-item">
             <label>Description:</label>
-            <input type="text" placeholder='Describe your task' />
+            <input type="text" value = {newDescription} onChange = {(e) => setNewDescription(e.target.value)}  placeholder='Describe your task' />
           </div>
           <div className="todo-input-item">
-            <button type = "button" className="add">Add</button>
+            <button type = "button" onClick={handleAddTodo}  className="add">Add</button>
           </div> 
         </div>
 
@@ -30,14 +48,28 @@ function App() {
         </div>
 
         <div className = "todo-list">
-          <div className="todo-lists-items">
-            <h3>Task 1</h3>
-            <p>Description</p>
+
+          {allTodos.map((item,index) =>{
+            return(
+          <div className="todo-lists-items" key = {index}>
+            <div>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+            </div>
+
+            <div>
+              <MdDelete className="icon" title="Delete?"/>
+              <FaCheck className = "check-icon" title="Complete?" />
+            </div>
+
             </div> 
+            )
+          })}
+
+
         </div>
 
       </div>
-
 
      </div>
        
