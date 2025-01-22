@@ -22,6 +22,15 @@ function App() {
     localStorage.setItem('todollist',JSON.stringify(updatedTodoArr))
   }
 
+  const handleDeleteTodo = (index) =>{
+    let reducedTodo = [...allTodos];
+    reducedTodo.splice(index);
+
+    localStorage.setItem('todolist',JSON.stringify(reducedTodo));
+    setTodos(reducedTodo);
+
+  }
+
   useEffect(()=>{
     let savedTodo = JSON.parse(localStorage.getItem('todolist'));
     if(savedTodo){
@@ -64,10 +73,10 @@ function App() {
             <p>{item.description}</p>
             </div>
 
-            {/* <div>
-              <MdDelete className="icon" title="Delete?"/>
+            <div>
+              <MdDelete className="icon" onClick={()=>handleDeleteTodo(index)} title="Delete?"/>
               <FaCheck className = "check-icon" title="Complete?" />
-            </div> */}
+            </div>
 
             </div> 
             )
