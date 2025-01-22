@@ -64,10 +64,10 @@ function App() {
             <p>{item.description}</p>
             </div>
 
-            <div>
+            {/* <div>
               <MdDelete className="icon" title="Delete?"/>
               <FaCheck className = "check-icon" title="Complete?" />
-            </div>
+            </div> */}
 
             </div> 
             )
