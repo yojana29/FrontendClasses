@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- If a <fieldset> is disabled, all form elements inside it become uneditable and do not get submitted with the form.
+     Users cannot enter or modify any data within a disabled <fieldset>. -->
+    <form>
+      <fieldset disabled>
+        <legend>Disabled Section</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Can't type here">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Can't type here">
+      </fieldset>
+    
+      <fieldset>
+        <legend>Active Section</legend>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+      </fieldset>
+    
+      <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
