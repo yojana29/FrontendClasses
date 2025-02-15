@@ -8,6 +8,7 @@ function App() {
   const [allTodos,setTodos] = useState([]);
   const [newTitle,setNewTitle] = useState("");
   const [newDescription,setNewDescription] = useState("");
+  const [completedTodos,setCompletedTodos] = useState([]);
 
 
   const handleAddTodo = () => {
@@ -28,6 +29,27 @@ function App() {
 
     localStorage.setItem('todolist',JSON.stringify(reducedTodo));
     setTodos(reducedTodo);
+
+  }
+  const handleCompleteTodos = (index)=>{
+    let now = new Date ();
+    // console.log(now);
+    let dd = now.getDate();
+    let mm = now.getMonth();
+    let yyyy = now.getFullYear();
+    let h = now.getHours();
+    let m = now.getMinutes();
+    let s = now.getSeconds();
+    let completeOn = dd + '-' + mm + '-' + yyyy + 'at' + h + ':' + m + ':' + s;
+
+    let filteredItem = {
+      ...allTodos[index],
+      completeOn:completeOn
+    }
+
+    let updatedCompletedArr = [...completedTodos];
+    updatedCompletedArr.push(filteredItem);
+    setCompletedTodos(updatedCompletedArr);
 
   }
 
@@ -65,7 +87,7 @@ function App() {
 
         <div className = "todo-list">
 
-          {allTodos.map((item,index) =>{
+          {isCompleteScreen === false && allTodos.map((item,index) =>{
             return(
           <div className="todo-lists-items" key = {index}>
             <div>
@@ -75,7 +97,26 @@ function App() {
 
             <div>
               <MdDelete className="icon" onClick={()=>handleDeleteTodo(index)} title="Delete?"/>
-              <FaCheck className = "check-icon" title="Complete?" />
+              {/* <FaCheck className = "check-icon"  onClick ={()=>handleCompleteTodos(index)} title="Complete?" /> */}
+            </div>
+
+            </div> 
+            )
+          })}
+
+
+          {isCompleteScreen === true && completedTodos.map((item,index) =>{
+            return(
+          <div className="todo-lists-items" key = {index}>
+            <div>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+            <p><small>Completed on : {item.completeOn}</small></p>
+            </div>
+
+            <div>
+              <MdDelete className="icon" onClick={()=>handleDeleteTodo(index)} title="Delete?"/>
+              <FaCheck className = "check-icon"  onClick ={()=>handleCompleteTodos(index)} title="Complete?" />
             </div>
 
             </div> 
