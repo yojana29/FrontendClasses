@@ -105,7 +105,7 @@ function App() {
           })}
 
 
-          {isCompleteScreen === true && completedTodos.map((item,index) =>{
+          {/* {isCompleteScreen === true && completedTodos.map((item,index) =>{
             return(
           <div className="todo-lists-items" key = {index}>
             <div>
@@ -121,7 +121,7 @@ function App() {
 
             </div> 
             )
-          })}
+          })} */}
 
 
         </div>
