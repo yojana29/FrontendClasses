@@ -71,11 +71,11 @@ button:hover{
     color:white;
 }
 .isCompleteScreen{
-    background-color: rgb(36, 140, 36)rgb(39, 35, 35);
+    background-color: rgb(29, 154, 29);
 
 }
 .active{
-    background-color:rgb(39, 35, 35);
+    background-color:rgb(15, 80, 42);
     color:white;
 
 }

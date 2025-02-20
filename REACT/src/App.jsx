@@ -50,7 +50,7 @@ function App() {
     let updatedCompletedArr = [...completedTodos];
     updatedCompletedArr.push(filteredItem);
     setCompletedTodos(updatedCompletedArr);
-
+    handleDeleteTodo(index);
   }
 
   useEffect(()=>{
@@ -81,13 +81,13 @@ function App() {
         </div>
 
         <div className = "btn-area">
-          <button className={` ${isCompleteScreen === false  && 'active'}`} onClick = {() => setCompleteScreen(true)}>ToDo</button>
-          <button  className={` ${isCompleteScreen === true && 'active'}`} onClick = {() => setCompleteScreen(false)}>Completed</button>
+          <button className={` ${isCompleteScreen === false  && 'active'}`} onClick = {() => setCompleteScreen(false)}>ToDo</button>
+          <button  className={` ${isCompleteScreen === true && 'active'}`} onClick = {() => setCompleteScreen(true)}>Completed</button>
         </div>
 
         <div className = "todo-list">
 
-          {isCompleteScreen === true && allTodos.map((item,index) =>{
+          {isCompleteScreen === false && allTodos.map((item,index) =>{
             return(
           <div className="todo-lists-items" key = {index}>
             <div>
@@ -105,7 +105,7 @@ function App() {
           })}
 
 
-          {isCompleteScreen === false && completedTodos.map((item,index) =>{
+          {isCompleteScreen === true && completedTodos.map((item,index) =>{
             return(
           <div className="todo-lists-items" key = {index}>
             <div>
