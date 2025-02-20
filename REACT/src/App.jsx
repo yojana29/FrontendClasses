@@ -81,13 +81,13 @@ function App() {
         </div>
 
         <div className = "btn-area">
-          <button className={`isCompleteScreen ${isCompleteScreen=== false  && 'active'}`} onClick = {() => setCompleteScreen(true)}>ToDo</button>
-          <button  className={`isCompleteScreen ${isCompleteScreen=== true  && 'active'}`} onClick = {() => setCompleteScreen(false)}>Completed</button>
+          <button className={` ${isCompleteScreen === false  && 'active'}`} onClick = {() => setCompleteScreen(true)}>ToDo</button>
+          <button  className={` ${isCompleteScreen === true && 'active'}`} onClick = {() => setCompleteScreen(false)}>Completed</button>
         </div>
 
         <div className = "todo-list">
 
-          {isCompleteScreen === false && allTodos.map((item,index) =>{
+          {isCompleteScreen === true && allTodos.map((item,index) =>{
             return(
           <div className="todo-lists-items" key = {index}>
             <div>
@@ -97,7 +97,7 @@ function App() {
 
             <div>
               <MdDelete className="icon" onClick={()=>handleDeleteTodo(index)} title="Delete?"/>
-              {/* <FaCheck className = "check-icon"  onClick ={()=>handleCompleteTodos(index)} title="Complete?" /> */}
+              <FaCheck className = "check-icon"  onClick ={()=>handleCompleteTodos(index)} title="Complete?" />
             </div>
 
             </div> 
@@ -105,7 +105,7 @@ function App() {
           })}
 
 
-          {/* {isCompleteScreen === true && completedTodos.map((item,index) =>{
+          {isCompleteScreen === false && completedTodos.map((item,index) =>{
             return(
           <div className="todo-lists-items" key = {index}>
             <div>
@@ -116,12 +116,12 @@ function App() {
 
             <div>
               <MdDelete className="icon" onClick={()=>handleDeleteTodo(index)} title="Delete?"/>
-              <FaCheck className = "check-icon"  onClick ={()=>handleCompleteTodos(index)} title="Complete?" />
+              {/* <FaCheck className = "check-icon"  onClick ={()=>handleCompleteTodos(index)} title="Complete?" /> */}
             </div>
 
             </div> 
             )
-          })} */}
+          })}
 
 
         </div>

@@ -70,6 +70,10 @@ button:hover{
     background-color:rgb(115, 219, 115);
     color:white;
 }
+.isCompleteScreen{
+    background-color: rgb(36, 140, 36)rgb(39, 35, 35);
+
+}
 .active{
     background-color:rgb(39, 35, 35);
     color:white;
