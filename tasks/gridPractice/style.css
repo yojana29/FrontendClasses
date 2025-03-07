@@ -1,11 +1,11 @@
-.box {
+/* .box {
     width: 200px;
     height: 200px;
     background-size: cover;
     background-position: center;
     display: inline-block;
     margin: 10px;
-}
+} */
 .gallery{
     border:1px solid black;
     display:grid;
