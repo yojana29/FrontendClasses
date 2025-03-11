@@ -1,13 +1,24 @@
-/* .box {
+.box {
     width: 200px;
     height: 200px;
     background-size: cover;
     background-position: center;
     display: inline-block;
     margin: 10px;
-} */
+}
 .gallery{
     border:1px solid black;
     display:grid;
     grid-template-columns: repeat(4,1fr);
+}
+.container{
+    display:flex;
+    gap:80px;
+
+
+}
+.text, .container{
+    position:relative;
+    top:320px;
+    padding:20px;
 }
