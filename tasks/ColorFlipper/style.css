@@ -1,0 +1,19 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color:whitesmoke;
+    transition: all 1s ease-in-out;
+}
+button{
+    background-color:blue;
+    color:white;
+    padding:20px;
+    border-radius:5px;
+    margin-left:650px;
+    margin-top:300px;
+    font-size:25px;
+    font-weight: bold;
+}
