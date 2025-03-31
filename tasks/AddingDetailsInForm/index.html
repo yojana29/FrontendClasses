@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <button class = "border-solid border-2 p-4 bg-blue-500 rounded-xl relative top-50 left-180  ">Add Details</button>
+   <form action="" class = "border-2 border-solid p-6 flex flex-col gap-2 relative top-10 left-150 max-w-80 hidden" >
+    <label for="name">Name:</label>
+    <input class = "border-2 border-solid p-1 rounded-sm" type="text" id="name"placeholder="Enter your  Full Name">
+    <label for="email">Email:</label>
+    <input class = "border-2 border-solid p-1 rounded-sm"type="email" placeholder="Enter your cast" id="email">
+    <label for="address">Address:</label>
+    <input class = "border-2 border-solid p-1 rounded-sm" type="text" id="address" placeholder="Enter your address">
+    <label for="number">Mobile Number:</label>
+    <input class = "border-2 border-solid p-1 rounded-sm" type="tel" placeholder="Mobile Number" id="number">
+    <div class="flex justify-center gap-10">
+        <button class="border border-solid min-w-25 rounded-sm bg-green-200 p-2">Submit</button>
+        <input  class="border border-solid min-w-25 rounded-sm bg-red-200 p-2" type="reset" >
+    </div>
+
+   </form> 
+</body>
+</html>

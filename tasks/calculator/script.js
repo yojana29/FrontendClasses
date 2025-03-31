@@ -1,4 +1,4 @@
-let button = document.querySelectorAll("input[type='button']:not(.special");
+let button = document.querySelectorAll("input[type='button']:not(.special)");
 let question = document.querySelector("#qn");
 let answer = document.querySelector("#ans");
 
